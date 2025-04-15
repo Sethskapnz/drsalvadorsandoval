@@ -11,6 +11,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
 <link rel="icon" href="favicon.ico" type="assets/images/favicons/favicon-16x16.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Dr. Salvador Sandoval, Ortopedista y Traumatólogo especializado en cirugía de rodilla, prótesis y lesiones deportivas. Atención profesional y personalizada en Veracruz.">
@@ -75,7 +77,7 @@
               <div class="hero-headline">Dr. Salvador Sandoval
                               <div class="hero-bio">Aviso de Publicidad es 2530082002A00044</div>
               <div class="hero-action">
-                <a href="https://wa.me/+522291537655" class="btn btn--primary" data-scroll="scrollTo">¡Agenda tu Cita!</a>
+                <a href="https://api.whatsapp.com/send?phone=522291537655&text=Quisiera%20agendar%20una%20cita%20con%20el%20Dr.%20Salvador%20Sandoval" class="btn btn--primary" data-scroll="scrollTo">¡Agenda tu Cita!</a>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6"></div>
@@ -93,68 +95,128 @@
                 <h2 class="heading-title">Mi especialidad</h2>
               </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- Panel #1 -->
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="feature-panel text-center">
-                <div class="feature-img">
-                  <img src="assets/images/icons/1.svg" alt="target">
-                </div>
-                <div class="feature-content">
-                  <h3>Prótesis de Rodilla</h3>
-                  <p>La cirugía de reemplazo de rodilla consiste en sustituir la articulación dañada por una prótesis artificial, aliviando el dolor y mejorando la movilidad. Se recomienda en casos de artritis severa o lesiones avanzadas que limitan la calidad de vida del paciente.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Panel #2 -->
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="feature-panel text-center">
-                <div class="feature-img">
-                  <img src="assets/images/icons/2.svg" alt="target">
-                </div>
-                <div class="feature-content">
-                  <h3>Artroscopia de Rodilla</h3>
-                  <p>Es un procedimiento mínimamente invasivo en el que se introduce una pequeña cámara en la rodilla para diagnosticar y tratar lesiones como desgarros meniscales, lesiones de cartílago o ligamentos. Permite una recuperación más rápida y menos dolor que la cirugía abierta.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-4">
-
-            <!-- Panel #3 -->
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="feature-panel text-center">
-                <div class="feature-img">
-                  <img src="assets/images/icons/3.svg" alt="target">
-                </div>
-                <div class="feature-content">
-                  <h3>Prótesis de Cadera</h3>
-                  <p>Se reemplaza la articulación de la cadera con una prótesis artificial para restaurar la movilidad y eliminar el dolor causado por desgaste, artritis o fracturas. Esta cirugía mejora significativamente la calidad de vida del paciente y facilita el regreso a sus actividades diarias.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Panel #4 -->
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="feature-panel text-center">
-                <div class="feature-img">
-                  <img src="assets/images/icons/4.svg" alt="target">
-                </div>
-                <div class="feature-content">
-                  <h3>Manguito Rotador</h3>
-                  <p>Se realiza para reparar desgarros en los tendones del manguito rotador del hombro, restaurando la fuerza y el movimiento. Puede hacerse mediante técnicas abiertas o artroscópicas, dependiendo del grado de la lesión y las necesidades del paciente.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> 
+  <!-- Paneles de especialidades -->
+  <div class="row justify-content-center">
+    <!-- Panel #1 -->
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="feature-panel text-center">
+        <div class="feature-img">
+          <img src="assets/images/icons/1.svg" alt="target">
         </div>
+        <div class="feature-content">
+          <h3>Prótesis de Rodilla</h3>
+          <p>La cirugía consiste en sustituir la articulación dañada por una prótesis artificial, aliviando el dolor y mejorando la movilidad.</p>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalRodilla">Leer más</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Panel #2 -->
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="feature-panel text-center">
+        <div class="feature-img">
+          <img src="assets/images/icons/2.svg" alt="target">
+        </div>
+        <div class="feature-content">
+          <h3>Artroscopia de Rodilla</h3>
+          <p>Procedimiento mínimamente invasivo para tratar lesiones meniscales, cartílago o ligamentos con menor tiempo de recuperación.</p>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalArtroscopia">Leer más</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Panel #3 -->
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="feature-panel text-center">
+        <div class="feature-img">
+          <img src="assets/images/icons/3.svg" alt="target">
+        </div>
+        <div class="feature-content">
+          <h3>Prótesis de Cadera</h3>
+          <p>Reemplaza la articulación dañada para eliminar el dolor y mejorar la movilidad, especialmente en casos de artrosis o fracturas.</p>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalCadera">Leer más</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Panel #4 -->
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="feature-panel text-center">
+        <div class="feature-img">
+          <img src="assets/images/icons/4.svg" alt="target">
+        </div>
+        <div class="feature-content">
+          <h3>Cirugía de Manguito Rotador</h3>
+          <p>Cirugía para reparar tendones del hombro, mejorando fuerza, movilidad y eliminando el dolor al mover el brazo.</p>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalManguito">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modales con información extendida -->
+  <!-- Modal: Prótesis de Rodilla -->
+  <div class="modal fade" id="modalRodilla" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Prótesis de Rodilla</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>La cirugía de prótesis de rodilla, también conocida como artroplastia total de rodilla, está indicada cuando el cartílago que recubre la articulación se ha desgastado gravemente, ya sea por artrosis, artritis reumatoide o traumatismos. El procedimiento consiste en reemplazar las superficies articulares dañadas por componentes metálicos y plásticos que simulan el movimiento natural de la rodilla. Esta cirugía permite corregir deformidades, eliminar el dolor crónico y restaurar la capacidad de caminar sin limitaciones. La recuperación incluye rehabilitación física guiada y seguimiento postoperatorio para garantizar la integración adecuada de la prótesis y prevenir complicaciones como infecciones o rigidez articular. En la mayoría de los casos, los pacientes logran una movilidad funcional que mejora significativamente su calidad de vida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal: Artroscopia de Rodilla -->
+  <div class="modal fade" id="modalArtroscopia" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Artroscopia de Rodilla</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>La artroscopia es un procedimiento quirúrgico mínimamente invasivo en el que se introduce una microcámara dentro de la articulación para observar y tratar lesiones internas. Es ideal para diagnosticar y reparar desgarros de menisco, condromalacia, cuerpos libres intraarticulares, lesiones del ligamento cruzado anterior (LCA) y sinovitis crónica. Al realizarse mediante pequeñas incisiones, el trauma tisular es menor, lo que se traduce en menor dolor postoperatorio, menor riesgo de infección y una recuperación más rápida. Es una técnica especialmente útil en deportistas o personas activas, ya que permite reincorporarse antes a sus rutinas. Tras la artroscopia, se recomienda iniciar fisioterapia a los pocos días para recuperar fuerza, estabilidad y rango de movimiento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal: Prótesis de Cadera -->
+  <div class="modal fade" id="modalCadera" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Prótesis de Cadera</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>La prótesis total de cadera es una solución eficaz en pacientes con dolor intenso, pérdida de movilidad o deformidad articular por desgaste severo, fracturas o enfermedades degenerativas. Durante la cirugía, se sustituyen tanto la cabeza femoral como el acetábulo por componentes artificiales que permiten restaurar el movimiento natural de la articulación. Las prótesis modernas ofrecen una excelente durabilidad, y con un adecuado seguimiento y terapia física, los pacientes pueden volver a caminar sin dolor, subir escaleras, manejar y hasta realizar ejercicios de bajo impacto. Esta cirugía es altamente efectiva en mejorar la calidad de vida, reduciendo el uso de analgésicos y ayudando a recuperar la independencia del paciente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal: Manguito Rotador -->
+  <div class="modal fade" id="modalManguito" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cirugía de Manguito Rotador</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>El manguito rotador es un grupo de músculos y tendones que estabilizan y permiten el movimiento del hombro. Las lesiones pueden deberse al desgaste progresivo, movimientos repetitivos o traumatismos, y causan dolor al levantar el brazo, debilidad y limitación funcional. La cirugía puede realizarse mediante técnica artroscópica o abierta, y su objetivo es reparar los tendones desgarrados, descomprimir el espacio subacromial y recuperar el equilibrio biomecánico del hombro. Es fundamental una correcta rehabilitación postoperatoria que incluya inmovilización inicial, ejercicios pasivos, fortalecimiento progresivo y reeducación del movimiento. Cuando se realiza oportunamente, esta intervención permite recuperar fuerza, evitar la atrofia muscular y volver a realizar actividades diarias o deportivas sin dolor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
       </section>
-      
-
-
-      <section id="bar" class="bg-white pt-0 pb-0">
+        <section id="bar" class="bg-white pt-0 pb-0">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -397,7 +459,7 @@
                     <img src="assets/images/footer/2.svg" alt="phone">
                   </div>
                   <h4>Horario</h4>
-                  <p>Lunes - Viernes 8:00am a 2:00pm</p>            
+                  <p>Lunes - Sábado 9:00am a 2:00pm</p>            
                 </div>
                 <!-- .widget-info-box end -->
               </div>
@@ -441,9 +503,11 @@
               </div>
               <!-- .col-md-6 end -->
               <div class="col-12 col-md-6 col-lg-6">
-                <div class="footer-social">
-              
-                  <a class="instagram" href="https://www.instagram.com/drsalvadorsandoval?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <div class="footer-social" style="font-size: 1.5em;">
+                  <a class="facebook" href="https://www.facebook.com/share/1GVCvtHqU1/?mibextid=wwXIfr" target="_blank" style="margin-right: 10px;">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a class="instagram" href="https://www.instagram.com/drsalvadorsandoval?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
                     <i class="fa fa-instagram"></i>
                   </a>
                 </div>
