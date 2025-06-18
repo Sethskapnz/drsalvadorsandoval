@@ -438,7 +438,70 @@
       </section>
       <!-- #consultation end -->
       <!-- Footer ============================================= -->
-      <footer id="footerParallax" class="footer">
+      
+<!-- Galería Grid + Lightbox ============================================= -->
+<section id="gallery" class="section bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h2 class="heading-title">Galería</h2>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria1.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria1.jpg">
+          <img src="assets/images/gallery/galeria1.jpg" class="img-fluid rounded shadow-sm" alt="Caso 1">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria2.jpg">
+          <img src="assets/images/gallery/galeria2.jpg" class="img-fluid rounded shadow-sm" alt="Caso 2">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria3.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria3.jpg">
+          <img src="assets/images/gallery/galeria3.jpg" class="img-fluid rounded shadow-sm" alt="Caso 3">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria4.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria4.jpg">
+          <img src="assets/images/gallery/galeria4.jpg" class="img-fluid rounded shadow-sm" alt="Caso 4">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria5.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria5.jpg">
+          <img src="assets/images/gallery/galeria5.jpg" class="img-fluid rounded shadow-sm" alt="Caso 5">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4">
+        <a href="assets/images/gallery/galeria6.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria6.jpg">
+          <img src="assets/images/gallery/galeria6.jpg" class="img-fluid rounded shadow-sm" alt="Caso 6">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Lightbox -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <img id="lightboxImage" src="" class="img-fluid rounded">
+    </div>
+  </div>
+</div>
+
+<script>
+  const lightboxModal = document.getElementById('lightboxModal');
+  lightboxModal.addEventListener('show.bs.modal', function (event) {
+    const trigger = event.relatedTarget;
+    const imageUrl = trigger.getAttribute('data-bs-image');
+    const modalImage = document.getElementById('lightboxImage');
+    modalImage.src = imageUrl;
+  });
+</script>
+<footer id="footerParallax" class="footer">
         <div class="footer-top">
           <div class="container">
             <div class="row widget-boxes text-center">
