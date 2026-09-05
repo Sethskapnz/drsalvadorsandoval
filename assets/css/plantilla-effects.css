@@ -1,0 +1,174 @@
+/* =========================================================
+   Plantilla Effects — ported from Plantilla/css/style.css
+   (WOW reveal, theme-title accent, case-block hover, scroll-top,
+   preloader) adapted to the site's own brand blue (#0070cd) and
+   typography (Poppins). Loaded on index.html, gonartrosis.html
+   and protesis-de-rodilla.html for a congruent effect layer.
+   ========================================================= */
+
+/* ---------- Preloader ---------- */
+#loader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+#loader-wrapper.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#loader {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 4px solid #e3edf7;
+  border-top-color: #0070cd;
+  animation: loader-spin .8s linear infinite;
+}
+@keyframes loader-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #loader { animation: none; }
+}
+
+/* ---------- WOW.js reveal (fadeInUp) ---------- */
+.wow { visibility: hidden; }
+.fadeInUp {
+  animation-name: peFadeInUp;
+}
+@keyframes peFadeInUp {
+  from { opacity: 0; transform: translate3d(0, 30px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.animated {
+  animation-duration: .8s;
+  animation-fill-mode: both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .wow { visibility: visible !important; }
+  .animated { animation: none !important; }
+}
+
+/* ---------- Section heading accent (theme-title-one) ---------- */
+.heading-accent { position: relative; }
+.heading-accent .heading-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 22px;
+}
+.heading-accent .heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  border-radius: 10px;
+  background: #0070cd;
+}
+
+/* ---------- Icon scale on hover (single-solution-block effect) ---------- */
+.feature-panel .feature-img {
+  transition: transform .4s ease-in-out;
+}
+.feature-panel:hover .feature-img {
+  transform: scale(1.1);
+}
+
+/* ---------- Gallery case-block hover overlay ---------- */
+.case-block {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.case-block img { border-radius: 6px; }
+.case-block .case-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 45, 92, 0.72);
+  border-radius: 6px;
+  transform: scale(1, 0);
+  transition: transform .3s ease-in-out;
+}
+.case-block:hover .case-overlay {
+  transform: scale(1, 1);
+}
+.case-block .case-text {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform .4s ease-in-out .1s, opacity .4s ease-in-out .1s;
+}
+.case-block:hover .case-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-block .case-text span {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+.case-block .case-text .case-icon {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #0070cd;
+  font-size: 16px;
+}
+
+/* ---------- Scroll to top ---------- */
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  background: #0070cd;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0, 112, 205, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all .3s ease-in-out;
+  border: none;
+}
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top:hover { background: #00549a; }
+
+/* ---------- Buttons: punchier theme-button-one treatment ---------- */
+.btn--primary, .btn--bordered.btn--white {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 700;
+  font-size: 14px;
+}

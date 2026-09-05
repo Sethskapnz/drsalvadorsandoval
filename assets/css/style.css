@@ -1747,9 +1747,6 @@ li.open > a:focus {
 }
 
 @media only screen and (max-width: 767px) {
-  .hero {
-    background-image: none !important;
-  }
   .hero .hero-action .btn {
     display: block;
     margin: 15px auto;
@@ -2716,53 +2713,6 @@ img {
     }
     .testimonial-panel {
         padding: 20px;
-    }
-}
-
-
-@media (max-width: 767px) {
-    .hero {
-        padding-top: 380px !important; /* Baja el contenido en móviles */
-    }
-}
-
-
-.hero .hero-headline {
-    margin-top: 150px !important; /* Ajuste para bajar el texto en escritorio */
-}
-
-@media only screen and (max-width: 767px) {
-    .hero .hero-headline {
-        margin-top: 200px !important; /* Baja aún más en móviles */
-    }
-}
-
-
-.hero .hero-headline {
-    margin-top: 150px !important; /* Baja el texto en escritorio */
-}
-
-@media only screen and (max-width: 767px) {
-    .hero .hero-headline {
-        margin-top: 180px !important; /* Baja aún más en móviles */
-    }
-}
-
-
-.hero {
-    background-image: url('../images/background/hero.jpg') !important;
-    background-size: cover;
-    background-position: center;
-}
-
-@media only screen and (max-width: 767px) {
-    .hero {
-        background-image: url('../images/background/hero.jpg') !important;
-        background-size: cover;
-        background-position: center;
-    }
-    .hero .hero-headline {
-        margin-top: 180px !important; /* Mantiene el ajuste del texto */
     }
 }
 

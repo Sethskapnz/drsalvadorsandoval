@@ -1,0 +1,552 @@
+/* =========================================================
+   Redesign — inspired by floria-landing-page.vercel.app
+   Editorial confidence (oversized type, floating glass nav,
+   numbered process, initial-avatar testimonials, bold
+   statement band) adapted to a medical-trust palette: brand
+   blue (#0070cd) + deep navy instead of Floria's black, kept
+   accessible (light body, AA contrast). Poppins stays the
+   body font; Instrument Serif italic is added only for the
+   occasional accent word, the way Floria uses its serif.
+   ========================================================= */
+
+/* ---------- Accent font (loaded only for flourish words) ---------- */
+.accent-serif {
+  font-family: "Instrument Serif", "Poppins", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ---------- Floating glass-pill nav ---------- */
+#navbar-spy.floria-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 22px;
+  z-index: 1040;
+}
+#navbar-spy.floria-nav .container {
+  background: rgba(10, 22, 40, 0.55);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0 30px;
+  max-width: 1100px;
+}
+#navbar-spy.floria-nav .navbar { min-height: 74px; }
+#navbar-spy.floria-nav .navbar-nav > li > a { line-height: 74px; color: #e8eef7; text-transform: none; }
+#navbar-spy.floria-nav .navbar-nav > li > a:hover { color: #ffffff; }
+#navbar-spy.floria-nav .logo { line-height: 74px; max-height: 40px; }
+@media (min-width: 992px) {
+  #navbar-spy.floria-nav { padding-top: 0; }
+  #navbar-spy.floria-nav .container {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 0 60px;
+    background: rgba(6, 16, 32, 0.92);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (max-width: 991px) {
+  /* Same solid full-width dark bar as desktop — no floating rounded pill,
+     no gap above it. */
+  #navbar-spy.floria-nav { padding-top: 0; }
+  #navbar-spy.floria-nav .container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 0 20px;
+    background: rgba(6, 16, 32, 0.92);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  #navbar-spy.floria-nav .navbar { min-height: 58px; }
+  #navbar-spy.floria-nav .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 58px;
+    margin-left: 0;
+  }
+  #navbar-spy.floria-nav .logo { line-height: normal; max-height: 28px; }
+  #navbar-spy.floria-nav .navbar-toggler {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  /* Expanded menu: same dark theme as the bar instead of the theme's
+     default plain white dropdown box, so open/closed states match. */
+  #navbar-spy.floria-nav .container > .navbar-collapse {
+    background-color: #06101f;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  #navbar-spy.floria-nav .navbar-nav { padding: 8px 15px 20px; }
+  #navbar-spy.floria-nav .navbar-nav > li > a {
+    line-height: 46px !important;
+    color: #e8eef7 !important;
+  }
+  #navbar-spy.floria-nav .navbar-nav > li > a:hover { color: #ffffff !important; }
+}
+
+/* ---------- Hero: dark scrim + eyebrow + ghost link ---------- */
+.hero.hero-floria {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 120px;
+  background-position: center 22% !important;
+}
+.hero-floria .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(100deg, rgba(4,16,34,0.58) 0%, rgba(4,16,34,0.34) 45%, rgba(4,16,34,0.06) 78%);
+}
+.hero-floria .container { position: relative; z-index: 2; }
+.hero-floria .eyebrow-pill {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(4,16,34,0.4);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #eaf1fb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero-floria .hero-headline {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+.hero-floria .hero-headline .accent-serif {
+  display: block;
+  color: #bcd7f5;
+  font-size: 44px;
+  margin-top: 6px;
+}
+.hero-floria .hero-bio {
+  color: rgba(255,255,255,0.85);
+  font-size: 15px;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+.hero-floria .ghost-link {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+  transition: border-color .25s ease-in-out, opacity .25s ease-in-out;
+}
+.hero-floria .ghost-link .arrow { display: inline-block; margin-left: 6px; transition: transform .25s ease-in-out; }
+.hero-floria .ghost-link:hover { border-color: #ffffff; }
+.hero-floria .ghost-link:hover .arrow { transform: translateX(4px); }
+.hero-floria .btn--rounded { border-radius: 999px; }
+/* Secondary hero CTA: a real outline button (matching height/width of the
+   primary via the shared .btn / .hero .btn rules) instead of a plain
+   underlined text link — the two previously looked like mismatched,
+   unevenly-sized controls sitting at different visual weights. */
+.hero-floria .btn--ghost-cta {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+}
+.hero-floria .btn--ghost-cta:hover,
+.hero-floria .btn--ghost-cta:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.hero-floria .btn--ghost-cta .arrow { display: inline-block; margin-left: 6px; transition: transform .25s ease-in-out; }
+.hero-floria .btn--ghost-cta:hover .arrow { transform: translateX(4px); }
+@media (max-width: 767px) {
+  .hero.hero-floria { padding-top: 150px; padding-bottom: 80px; }
+  .hero-floria .hero-headline { font-size: 38px; }
+  .hero-floria .hero-headline .accent-serif { font-size: 30px; }
+}
+
+/* ---------- Heading accent word ---------- */
+.heading-title .accent-serif { color: #0070cd; }
+
+/* ---------- Services as archive cards ---------- */
+.archive-card {
+  border-radius: 14px;
+  padding: 44px 30px;
+  transition: box-shadow .3s ease-in-out, transform .3s ease-in-out;
+}
+.archive-card:hover {
+  box-shadow: 0 20px 50px 0 rgba(10, 30, 60, 0.10);
+  transform: translateY(-4px);
+}
+.archive-card .feature-img {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: #eaf3fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.archive-card .feature-img img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.archive-card .feature-content .arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: #0070cd;
+  margin-top: 8px;
+}
+.archive-card .feature-content .arrow-link .circle {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 50%;
+  background: #eaf3fc;
+  text-align: center;
+  transition: background .25s ease-in-out, transform .25s ease-in-out;
+}
+.archive-card:hover .feature-content .arrow-link .circle {
+  background: #0070cd;
+  color: #fff;
+}
+
+/* ---------- Statement band ---------- */
+.statement-band {
+  background: linear-gradient(120deg, #04162a 0%, #0070cd 120%);
+  padding: 90px 0;
+  text-align: center;
+}
+.statement-band h2 {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 780px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .statement-band { padding: 60px 0; }
+  .statement-band h2 { font-size: 24px; }
+}
+
+/* ---------- Testimonials: static grid with initial avatars ---------- */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+@media (max-width: 991px) { .testimonial-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 575px) { .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 34px 28px;
+  box-shadow: 0 10px 30px 0 rgba(20, 40, 70, 0.06);
+}
+.testimonial-card p {
+  font-size: 15px;
+  line-height: 26px;
+  color: #444444;
+  margin-bottom: 22px;
+}
+.testimonial-card .person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.testimonial-card .avatar {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0070cd;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-card .person h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+.testimonial-card .person span {
+  font-size: 12px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+/* ---------- Testimonial slider (real Doctoralia reviews) ---------- */
+.testimonial-slider { position: relative; max-width: 720px; margin: 0 auto; padding: 0 56px; }
+.testimonial-slides { position: relative; overflow: hidden; transition: height .4s ease-in-out; }
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .5s ease-in-out;
+}
+.testimonial-slide.is-active { opacity: 1; pointer-events: auto; position: relative; }
+.testimonial-slide .person { justify-content: center; }
+.testimonial-source-link { margin-top: 26px; }
+.ghost-link--dark { color: #0a1628; border-bottom-color: rgba(10,22,40,0.35); }
+.ghost-link--dark:hover { border-color: #0a1628; }
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(10, 22, 40, 0.15);
+  background: #ffffff;
+  color: #0a1628;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+.slider-arrow:hover { background: #0070cd; color: #ffffff; border-color: #0070cd; }
+.slider-arrow.prev { left: 0; }
+.slider-arrow.next { right: 0; }
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+.slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10, 22, 40, 0.18);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s ease-in-out, transform .2s ease-in-out;
+}
+.slider-dot.is-active { background: #0070cd; transform: scale(1.25); }
+@media (max-width: 575px) {
+  .testimonial-slider { padding: 0 44px; }
+  .slider-arrow { width: 34px; height: 34px; }
+}
+
+/* ---------- Numbered process (Sobre la consulta) ---------- */
+.process-steps { margin-top: 10px; }
+.process-step {
+  display: flex;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eef1f5;
+}
+.process-step:last-child { border-bottom: none; }
+.process-step .num {
+  flex: none;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-size: 34px;
+  color: #b9d6f4;
+  line-height: 1;
+  width: 46px;
+}
+.process-step h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.process-step p {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+  line-height: 22px;
+}
+
+/* ---------- Footer redesign ---------- */
+@media (max-width: 767px) {
+  .footer-floria .footer-brand,
+  .footer-floria .footer-col { margin-bottom: 34px; }
+  .footer-floria .footer-brand p { max-width: none; }
+}
+#footerParallax.footer-floria {
+  position: static !important;
+  z-index: auto !important;
+}
+/* Old template JS sets margin-bottom on #wrapperParallax to reserve scroll
+   space for a fixed-footer reveal effect we don't use anymore — neutralize it
+   so the page doesn't end in a dead blank gap after the footer. */
+#wrapperParallax {
+  margin-bottom: 0 !important;
+}
+.footer-floria { background: #04162a; padding: 110px 0 0; }
+.footer-floria, .footer-floria a { color: rgba(255,255,255,0.7); }
+.footer-floria a:hover { color: #ffffff; }
+.footer-floria .footer-brand h3 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.footer-floria .footer-brand p { font-size: 14px; line-height: 24px; max-width: 320px; }
+.footer-floria .footer-col h6 {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-floria .footer-col ul { padding: 0; margin: 0; list-style: none; }
+.footer-floria .footer-col ul li { margin-bottom: 12px; font-size: 14px; }
+.footer-floria .social-row { margin-top: 22px; }
+.footer-floria .social-row a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.footer-floria .social-row a:hover { border-color: #ffffff; }
+.footer-floria .wordmark {
+  text-align: center;
+  font-size: clamp(48px, 12vw, 140px);
+  font-weight: 700;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  margin: 60px 0 0;
+  letter-spacing: 2px;
+  user-select: none;
+}
+.footer-floria .wordmark-small {
+  display: block;
+  font-size: clamp(14px, 2.2vw, 24px);
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.16);
+  margin-bottom: 8px;
+}
+.footer-floria .footer-bottom-bar {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 22px 0;
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+
+/* ---------- #gallery: guaranteed breathing room before the footer ---------- */
+#gallery { padding-bottom: 130px; }
+
+/* ---------- #consultation: align left copy with the contact card ---------- */
+#consultation .feature-panel { padding-top: 0; }
+@media (min-width: 768px) {
+  /* The steps list (5 items) runs taller than the contact card's own
+     content, leaving the card stranded at the top of a much taller gray
+     column. Stretch the card to fill that column and center its content,
+     so the two sides read as one balanced composition. */
+  .consultation-col-contact { display: flex; }
+  .consultation-col-contact .contact-cta-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ---------- Structured body copy: sub-headings + checklist ----------
+   Long single-paragraph blocks (causas, síntomas, antes/después de la
+   cirugía) read as a wall of text. These give the same visual language
+   already used elsewhere (blue accent, checkmark bullets) to break that
+   copy into scannable sections instead of run-on prose. */
+.feature-subhead {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #0070cd;
+  margin: 32px 0 10px;
+  line-height: 1.3;
+}
+.heading-desc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.heading-desc-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 14px;
+  color: #666666;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+}
+.heading-desc-list li:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 13px;
+  line-height: 26px;
+  color: #0070cd;
+}
+.heading-desc-list li strong { color: #2c303d; }
+.heading-desc + .heading-desc { margin-top: 16px; }
+/* A second section title inside the same text column (e.g. "Causas y
+   síntomas..." right after the intro copy) had zero breathing room —
+   paragraphs carry no bottom margin and h2 carries no top margin, so text
+   and the next heading collided. */
+.heading h2.heading-title:not(:first-of-type) { margin-top: 56px; }
+
+/* ---------- Contact CTA card (replaces the old mini-form) ---------- */
+.contact-cta-card .contact-cta-text {
+  text-align: center;
+  color: #666666;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 28px;
+}
+.contact-cta-card .btn { margin-bottom: 14px; }
+.contact-cta-card .btn:last-child { margin-bottom: 0; }
+.contact-cta-card .btn .fa { margin-right: 8px; }
+
+@media (max-width: 767px) {
+  #feature2 p[style*="justify"],
+  #speciality p[style*="justify"] { text-align: left !important; }
+}
+
+/* ---------- Mobile nav: white toggler + squared-off expanded menu ---------- */
+#navbar-spy.floria-nav .toogle-inner,
+#navbar-spy.floria-nav .toogle-inner:before,
+#navbar-spy.floria-nav .toogle-inner:after {
+  background-color: #ffffff;
+}
+

@@ -23,43 +23,51 @@
 
       <!-- Fonts ============================================= -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <!-- Stylesheets ============================================= -->
     <link href="assets/css/external.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/vendor/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/css/plantilla-effects.css" rel="stylesheet">
+    <link href="assets/css/redesign-floria.css" rel="stylesheet">
 
    
   <body class="body-scroll">
+    <!-- Preloader ============================================= -->
+    <div id="loader-wrapper"><div id="loader"></div></div>
+
     <!-- Document Wrapper ============================================= -->
     <div id="wrapperParallax" class="wrapper clearfix">
 
       <!-- Header ============================================= -->
-      <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
+      <header id="navbar-spy" class="header header-1 header-transparent header-fixed floria-nav">
         <nav id="primary-menu" class="navbar navbar-expand-lg navbar-dark">
           <div class="container">
             <a class="navbar-brand" href="index.html">
-              <img class="logo logo-dark" src="assets/images/logo/logo-sandoval.png" alt="Dr. Salvador Sandoval - Ortopedista y Traumatólogo">
+              <img class="logo logo-dark" src="assets/images/logo/logo-sandoval-white.png" alt="Dr. Salvador Sandoval - Ortopedista y Traumatólogo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="toogle-inner"></span>
             </button>
             
 <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-  <ul class="navbar-nav mx-auto text-center">
-
-              <ul class="navbar-nav mr-auto">
-  <li>
-      <a data-scroll="scrollTo" href="#patients">Testimonios</a>
-    </li>
-    <li>
-      <a data-scroll="scrollTo" href="#consultation">Contáctanos</a>
-    </li>
-    <li>
-      <a href="gonartrosis.html">Gonartrosis</a>
-    </li>
-    <li>
-      <a href="protesis-de-rodilla.html">Prótesis de Rodilla</a>
-    </li>
+              <ul class="navbar-nav mx-auto text-center">
+                <li>
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                  <a data-scroll="scrollTo" href="#patients">Testimonios</a>
+                </li>
+                <li>
+                  <a data-scroll="scrollTo" href="#consultation">Contáctanos</a>
+                </li>
+                <li>
+                  <a href="gonartrosis.html">Gonartrosis</a>
+                </li>
+                <li>
+                  <a href="protesis-de-rodilla.html">Prótesis de Rodilla</a>
+                </li>
               </ul>
             </div>
             <!--/.nav-collapse -->
@@ -67,20 +75,25 @@
         </nav>
       </header>
       <!-- Slider #1 ============================================= -->
-      <section id="hero" class="section hero">
+      <section id="hero" class="section hero hero-floria">
         <div class="bg-section">
           <img src="assets/images/background/hero.jpg" alt="background">
         </div>
+        <div class="hero-overlay"></div>
         <div class="container">
           <div class="row row-content">
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="hero-headline">Dr. Salvador Sandoval
-                              <div class="hero-bio">Aviso de Publicidad es 2530082002A00044</div>
-              <div class="hero-action">
-                <a href="https://api.whatsapp.com/send?phone=523333900700&text=Quisiera%20agendar%20una%20cita%20con%20el%20Dr.%20Salvador%20Sandoval" class="btn btn--primary" data-scroll="scrollTo">¡Agenda tu Cita!</a>
+            <div class="col-12 col-lg-8">
+              <span class="eyebrow-pill wow fadeInUp animated">Ortopedia &middot; Traumatología</span>
+              <div class="hero-headline wow fadeInUp animated" data-wow-delay="0.1s">
+                Dr. Salvador Sandoval
+                <span class="accent-serif">Cirugía de rodilla y hombro.</span>
+              </div>
+              <div class="hero-bio wow fadeInUp animated" data-wow-delay="0.2s">Aviso de Publicidad es 2530082002A00044</div>
+              <div class="hero-action d-flex flex-wrap align-items-center gap-4 wow fadeInUp animated" data-wow-delay="0.3s">
+                <a href="https://api.whatsapp.com/send?phone=523333900700&text=Quisiera%20agendar%20una%20cita%20con%20el%20Dr.%20Salvador%20Sandoval" class="btn btn--primary btn--rounded" data-scroll="scrollTo">¡Agenda tu Cita!</a>
+                <a href="https://www.doctoralia.com.mx/perfil/juan-salvador-sandoval-vargas" class="btn btn--bordered btn--rounded btn--ghost-cta" target="_blank" rel="noopener">Ver en Doctoralia <span class="arrow">&rarr;</span></a>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6"></div>
           </div>
           <!-- .row end -->
         </div>
@@ -91,7 +104,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
-              <div class="heading heading-1 text-center">
+              <div class="heading heading-1 text-center heading-accent wow fadeInUp animated">
                 <h2 class="heading-title">Mi especialidad</h2>
               </div>
             </div>
@@ -99,57 +112,71 @@
   <!-- Paneles de especialidades -->
   <div class="row justify-content-center">
     <!-- Panel #1 -->
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="feature-panel text-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="feature-panel archive-card text-center wow fadeInUp animated" data-wow-delay="0.0s">
         <div class="feature-img">
-          <img src="assets/images/icons/1.svg" alt="target">
+          <img src="assets/images/icons/protesis%20rodilla.png" alt="Prótesis de Rodilla">
         </div>
         <div class="feature-content">
           <h3>Prótesis de Rodilla</h3>
           <p>La cirugía consiste en sustituir la articulación dañada por una prótesis artificial, aliviando el dolor y mejorando la movilidad.</p>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#modalRodilla">Leer más</a>
+          <a href="#" class="arrow-link" data-bs-toggle="modal" data-bs-target="#modalRodilla">Leer más <span class="circle">&rarr;</span></a>
         </div>
       </div>
     </div>
   
     <!-- Panel #2 -->
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="feature-panel text-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="feature-panel archive-card text-center wow fadeInUp animated" data-wow-delay="0.1s">
         <div class="feature-img">
-          <img src="assets/images/icons/2.svg" alt="target">
+          <img src="assets/images/icons/artroscopia.png" alt="Artroscopia de Rodilla">
         </div>
         <div class="feature-content">
           <h3>Artroscopia de Rodilla</h3>
           <p>Procedimiento mínimamente invasivo para tratar lesiones meniscales, cartílago o ligamentos con menor tiempo de recuperación.</p>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#modalArtroscopia">Leer más</a>
+          <a href="#" class="arrow-link" data-bs-toggle="modal" data-bs-target="#modalArtroscopia">Leer más <span class="circle">&rarr;</span></a>
         </div>
       </div>
     </div>
   
     <!-- Panel #3 -->
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="feature-panel text-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="feature-panel archive-card text-center wow fadeInUp animated" data-wow-delay="0.2s">
         <div class="feature-img">
-          <img src="assets/images/icons/3.svg" alt="target">
+          <img src="assets/images/icons/reemplazo-de-cadera.png" alt="Prótesis de Cadera">
         </div>
         <div class="feature-content">
           <h3>Prótesis de Cadera</h3>
           <p>Reemplaza la articulación dañada para eliminar el dolor y mejorar la movilidad, especialmente en casos de artrosis o fracturas.</p>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#modalCadera">Leer más</a>
+          <a href="#" class="arrow-link" data-bs-toggle="modal" data-bs-target="#modalCadera">Leer más <span class="circle">&rarr;</span></a>
         </div>
       </div>
     </div>
   
     <!-- Panel #4 -->
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="feature-panel text-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="feature-panel archive-card text-center wow fadeInUp animated" data-wow-delay="0.3s">
         <div class="feature-img">
-          <img src="assets/images/icons/4.svg" alt="target">
+          <img src="assets/images/icons/manguito%20rotador.png" alt="Cirugía de Reparación de Manguito Rotador">
         </div>
         <div class="feature-content">
-          <h3>Cirugía de Manguito Rotador</h3>
+          <h3>Cirugía de Reparación de Manguito Rotador</h3>
           <p>Cirugía para reparar tendones del hombro, mejorando fuerza, movilidad y eliminando el dolor al mover el brazo.</p>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#modalManguito">Leer más</a>
+          <a href="#" class="arrow-link" data-bs-toggle="modal" data-bs-target="#modalManguito">Leer más <span class="circle">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel #5 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="feature-panel archive-card text-center wow fadeInUp animated" data-wow-delay="0.4s">
+        <div class="feature-img">
+          <img src="assets/images/icons/neurolisis.svg" alt="Neurólisis por Radiofrecuencia">
+        </div>
+        <div class="feature-content">
+          <h3>Neurólisis por Radiofrecuencia</h3>
+          <p>Procedimiento mínimamente invasivo que bloquea la transmisión del dolor en columna o rodilla, sin necesidad de cirugía abierta.</p>
+          <a href="#" class="arrow-link" data-bs-toggle="modal" data-bs-target="#modalNeurolisis">Leer más <span class="circle">&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -215,6 +242,22 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal: Neurólisis por Radiofrecuencia -->
+  <div class="modal fade" id="modalNeurolisis" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Neurólisis por Radiofrecuencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>La neurólisis por radiofrecuencia es un procedimiento mínimamente invasivo utilizado para el manejo del dolor crónico de columna o rodilla cuando otros tratamientos conservadores no han sido suficientes. Mediante guía por imagen, se coloca una aguja muy fina cerca del nervio responsable de transmitir la señal de dolor, y a través de ella se aplica energía de radiofrecuencia que interrumpe temporalmente esa transmisión, sin necesidad de cortes ni cirugía abierta. Es una alternativa frecuente en pacientes con dolor facetario de columna, dolor lumbar crónico o gonalgia por artrosis de rodilla que buscan aliviar el dolor y recuperar movilidad antes de considerar una cirugía mayor. El procedimiento se realiza de forma ambulatoria, con anestesia local y sedación ligera, y la recuperación es rápida, permitiendo reincorporarse a las actividades cotidianas en pocos días.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
       </section>
         <section id="bar" class="bg-white pt-0 pb-0">
         <div class="container">
@@ -279,77 +322,102 @@
         <div class="container">
           <div class="row clearfix">
             <div class="col-12 col-md-12 col-lg-12">
-              <div class="heading heading-1 text-center">
+              <div class="heading heading-1 text-center heading-accent wow fadeInUp animated">
                 <h2 class="heading-title">Lo que dicen mis pacientes</h2>
               </div>
             </div>
             <!-- .col-md-6 end -->
           </div>
           <!-- .row end -->
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-              <div class="carousel carousel-dots owl-carousel" data-slide="2" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="800">
-
-                <!-- Testimonial #1 -->
-                <div class="testimonial-panel">
-                  <div class="testimonial-body">
-                    <p>Hizo sentir a mi mamá confianza, fue atento en todo momento y nos espero a pesar de que nos atrasamos con los estudios.</p>
-                    <div class="testimonial-author">
-                      <h5>Lenin Ramirez</h5>
-                    </div>
+          <div class="testimonial-slider">
+            <div class="testimonial-slides">
+              <div class="testimonial-slide testimonial-card is-active">
+                <p>&ldquo;Excelente atención del Dr. Sandoval en artroscopia de rodilla por desgarre de menisco. A un año de la cirugía gozo de un saludable movimiento en mi rodilla; su atención post quirúrgica fue muy humana y empática.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">A</div>
+                  <div>
+                    <h5>Angie Nuñez</h5>
+                    <span>Paciente &middot; Doctoralia, 7 oct 2024</span>
                   </div>
                 </div>
-
-                <!-- Testimonial #2 -->
-                <div class="testimonial-panel">
-                  <div class="testimonial-body">
-                    <p>Su atención fue primordial y a tiempo ,sus decisiones me han ayudado en mi operación y recuperación.</p>
-                    <div class="testimonial-author">
-                      <h5>Adolfo Hernández</h5>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Testimonial #3 -->
-                <div class="testimonial-panel">
-                  <div class="testimonial-body">
-                    <p>Se preocupó por mi bienestar en todo momento. Muy recomendable.</p>
-                    <div class="testimonial-author">
-                      <h5>Toni Mercado</h5>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Testimonial #4 -->
-                <div class="testimonial-panel">
-                  <div class="testimonial-body">
-                    <p>Después de la cirugía, seguí sus indicaciones y mi recuperación fue rápida.</p>
-                    <div class="testimonial-author">
-                      <h5>Carlos Ruiz
-                      </h5>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Testimonial #5 -->
-                <div class="testimonial-panel">
-                  <div class="testimonial-body">
-                    <p>El doctor se aseguró de que todo saliera bien y hoy mi brazo está perfecto.</p>
-                    <div class="testimonial-author">
-                      <h5>Emily consuegra</h5>
-                    </div>
-                  </div>
-                </div>
-
               </div>
-              <!-- .carousel End -->
+              <div class="testimonial-slide testimonial-card">
+                <p>&ldquo;La mejor atención, muy profesional, explica muy detalladamente y aclaró todas mis dudas. Me reparó el ligamento cruzado anterior y pude tener un excelente retorno a mis actividades deportivas.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">B</div>
+                  <div>
+                    <h5>Brenda Bonachea</h5>
+                    <span>Paciente &middot; Doctoralia, 7 oct 2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide testimonial-card">
+                <p>&ldquo;Excelente Doctor. Desde el momento que estuve en consulta me sentí en total confianza, todo explicado de manera detallada. Mi operación de rodilla fue todo un éxito gracias a su experiencia.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">H</div>
+                  <div>
+                    <h5>Hilda SV</h5>
+                    <span>Paciente &middot; Doctoralia, 27 sep 2024</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide testimonial-card">
+                <p>&ldquo;El doctor Sandoval me trató con una empatía muy humana. Examinó mi rodilla con detenimiento y me explicó detalladamente lo que me sucedía. Quedé muy satisfecha y lo recomiendo altamente.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">T</div>
+                  <div>
+                    <h5>Teresa ST</h5>
+                    <span>Paciente &middot; Doctoralia, 19 ago 2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide testimonial-card">
+                <p>&ldquo;Muy buen doctor, aunque joven cuenta con mucho conocimiento y alternativas modernas acordes a la tecnología y ciencia de estos tiempos.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">S</div>
+                  <div>
+                    <h5>Sergio Gutiérrez</h5>
+                    <span>Paciente &middot; Doctoralia, 21 jul 2026</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-slide testimonial-card">
+                <p>&ldquo;Muy buena atención, el doctor explica a los pacientes todo lo relacionado con la cirugía y el paciente se siente más tranquilo. Muchas gracias.&rdquo;</p>
+                <div class="person">
+                  <div class="avatar">A</div>
+                  <div>
+                    <h5>Araceli Licea</h5>
+                    <span>Paciente &middot; Doctoralia, 13 jul 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="slider-arrow prev" aria-label="Testimonio anterior">&larr;</button>
+            <button type="button" class="slider-arrow next" aria-label="Testimonio siguiente">&rarr;</button>
+            <div class="slider-dots">
+              <button type="button" class="slider-dot is-active" aria-label="Testimonio 1"></button>
+              <button type="button" class="slider-dot" aria-label="Testimonio 2"></button>
+              <button type="button" class="slider-dot" aria-label="Testimonio 3"></button>
+              <button type="button" class="slider-dot" aria-label="Testimonio 4"></button>
+              <button type="button" class="slider-dot" aria-label="Testimonio 5"></button>
+              <button type="button" class="slider-dot" aria-label="Testimonio 6"></button>
             </div>
           </div>
-          <!-- .row End -->
+          <div class="text-center testimonial-source-link">
+            <a href="https://www.doctoralia.com.mx/perfil/juan-salvador-sandoval-vargas" target="_blank" rel="noopener" class="ghost-link ghost-link--dark">Ver las 164 opiniones en Doctoralia <span class="arrow">&rarr;</span></a>
+          </div>
         </div>
         <!-- .container End -->
       </section>
       <!-- #patients End-->
+
+      <!-- Statement Band ============================================= -->
+      <div class="statement-band wow fadeInUp animated">
+        <div class="container">
+          <h2>Cada rodilla es distinta. Cada tratamiento, también.</h2>
+        </div>
+      </div>
+
            <!-- Action ============================================= -->
       <section id="consultation" class="section feature feature-2 bg-gray">
         <div class="container">
@@ -359,74 +427,60 @@
                 <div class="feature-content">
                   <h3>Sobre la consulta</h3>
                   <p class="heading-desc" style="text-align: justify;" class="mb-30">Te ofrezco una valoración personalizada en traumatología y lesiones deportivas. Una vez que solicites tu cita, me pondré en contacto contigo lo más pronto posible para confirmarla vía WhatsApp. Estoy aquí para brindarte la mejor atención para tu recuperación.</p>
-                  <ul>
-                    <li>Coméntame tu lesión o molestia.</li>
-                    <li>Evaluaré tu movilidad y síntomas.</li>
-                    <li>Revisaré tus estudios médicos.</li>
-                    <li>Te brindaré un diagnóstico preciso.</li>
-                    <li>Diseñaré un plan de tratamiento para tu recuperación.</li>
-                  </ul>
+                  <div class="process-steps">
+                    <div class="process-step">
+                      <div class="num">01</div>
+                      <div>
+                        <h4>Cuéntame tu caso</h4>
+                        <p>Coméntame tu lesión o molestia.</p>
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <div class="num">02</div>
+                      <div>
+                        <h4>Evaluación</h4>
+                        <p>Evaluaré tu movilidad y síntomas.</p>
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <div class="num">03</div>
+                      <div>
+                        <h4>Revisión de estudios</h4>
+                        <p>Revisaré tus estudios médicos.</p>
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <div class="num">04</div>
+                      <div>
+                        <h4>Diagnóstico</h4>
+                        <p>Te brindaré un diagnóstico preciso.</p>
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <div class="num">05</div>
+                      <div>
+                        <h4>Plan de tratamiento</h4>
+                        <p>Diseñaré un plan de tratamiento para tu recuperación.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- .feature-panel end -->
             </div>
             <!-- .col-md-6 end -->
-            <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
-              <div class="form-wrapper">
+            <div class="col-12 col-md-6 col-lg-5 offset-lg-1 consultation-col-contact">
+              <div class="form-wrapper contact-cta-card">
                 <div class="heading">
                   <h3 class="heading-title">Contáctanos</h3>
                 </div>
-                <!-- .form-group end -->
-                <form method="post" action="assets/php/contact.php" class="contactForm mb-0">
-                  <div id="result" class="contact-result"></div>
-                  <div class="form-group">
-                    <label for="name">Ingresa tu Nombre*</label>
-                    <input type="text" class="form-control" name="name" id="name" required="required">
-                  </div>
-                  <!-- .form-group end -->
-                  <div class="form-group">
-                    <label for="phone">Ingresa tu número celular*</label>
-                    <input type="text" class="form-control" name="phone" id="phone" required="required">
-                  </div>
-                  <!-- .form-group end -->
-                  <div class="form-group">
-                    <div class="form-group">
-                      <div class="form-check form-check-inline form-radio">
-                      </div>
-                      <div class="form-check form-check-inline form-radio">
-                      </div>
-                    </div>
-                  </div>
-                  <!-- .form-group end -->
-                  <div class="form-group">
-                    <div class="select-form">
-                      <i class="fa fa-caret-down"></i>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <a href="#" id="whatsapp-link">
-                      <input type="submit" value="¡Agenda tu cita!" name="submit" class="btn btn--primary btn--block">
-                    </a>
-                  </div>
-                </form>
-                
-                <script>
-                  document.querySelector('.contactForm').addEventListener('submit', function(e) {
-                    e.preventDefault(); // Evita que el formulario se envíe de forma tradicional
-                
-                    var name = document.getElementById('name').value;
-                    var phone = document.getElementById('phone').value;
-                
-                    // Crear el enlace de WhatsApp con los datos del usuario
-                    var whatsappLink = 'https://wa.me/+523333900700?text=Hola, mi nombre es ' + encodeURIComponent(name) + ' y mi número es ' + encodeURIComponent(phone) + ' quisiera una cita con el Dr. Salvador Sandoval';
-                
-                    // Redirigir al enlace de WhatsApp
-                    window.location.href = whatsappLink;
-                  });
-                </script>
-                
-                  <!-- .form-group end -->
-                </form>
+                <p class="contact-cta-text">Escríbeme directo por WhatsApp y te contesto personalmente para agendar tu cita, o revisa mi perfil y opiniones verificadas en Doctoralia.</p>
+                <a href="https://api.whatsapp.com/send?phone=523333900700&text=Quisiera%20agendar%20una%20cita%20con%20el%20Dr.%20Salvador%20Sandoval" class="btn btn--primary btn--block" target="_blank" rel="noopener">
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i> ¡Agenda tu cita por WhatsApp!
+                </a>
+                <a href="https://www.doctoralia.com.mx/perfil/juan-salvador-sandoval-vargas" class="btn btn--bordered btn--primary btn--block" target="_blank" rel="noopener">
+                  Ver perfil en Doctoralia
+                </a>
               </div>
             </div>
             <!-- .col-md-6 end -->
@@ -443,145 +497,118 @@
 <section id="gallery" class="section bg-white">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center mb-4">
+      <div class="col-12 text-center mb-4 heading-accent wow fadeInUp animated">
         <h2 class="heading-title">Galería</h2>
       </div>
     </div>
     <div class="row g-3">
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria1.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria1.jpg">
-          <img src="assets/images/gallery/galeria1.jpg" class="img-fluid rounded shadow-sm" alt="Caso 1">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria1.jpg" data-fancybox="galeria" data-caption="Caso 1" class="case-block wow fadeInUp animated" data-wow-delay="0.0s">
+          <img src="assets/images/gallery/galeria1.jpg" class="img-fluid shadow-sm" alt="Caso 1">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 1</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria2.jpg">
-          <img src="assets/images/gallery/galeria2.jpg" class="img-fluid rounded shadow-sm" alt="Caso 2">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria2.jpg" data-fancybox="galeria" data-caption="Caso 2" class="case-block wow fadeInUp animated" data-wow-delay="0.1s">
+          <img src="assets/images/gallery/galeria2.jpg" class="img-fluid shadow-sm" alt="Caso 2">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 2</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria3.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria3.jpg">
-          <img src="assets/images/gallery/galeria3.jpg" class="img-fluid rounded shadow-sm" alt="Caso 3">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria3.jpg" data-fancybox="galeria" data-caption="Caso 3" class="case-block wow fadeInUp animated" data-wow-delay="0.2s">
+          <img src="assets/images/gallery/galeria3.jpg" class="img-fluid shadow-sm" alt="Caso 3">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 3</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria4.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria4.jpg">
-          <img src="assets/images/gallery/galeria4.jpg" class="img-fluid rounded shadow-sm" alt="Caso 4">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria4.jpg" data-fancybox="galeria" data-caption="Caso 4" class="case-block wow fadeInUp animated" data-wow-delay="0.3s">
+          <img src="assets/images/gallery/galeria4.jpg" class="img-fluid shadow-sm" alt="Caso 4">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 4</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria5.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria5.jpg">
-          <img src="assets/images/gallery/galeria5.jpg" class="img-fluid rounded shadow-sm" alt="Caso 5">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria5.jpg" data-fancybox="galeria" data-caption="Caso 5" class="case-block wow fadeInUp animated" data-wow-delay="0.4s">
+          <img src="assets/images/gallery/galeria5.jpg" class="img-fluid shadow-sm" alt="Caso 5">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 5</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
-
-      <div class="col-6 col-md-4">
-        <a href="assets/images/gallery/galeria6.jpg" data-bs-toggle="modal" data-bs-target="#lightboxModal" data-bs-image="assets/images/gallery/galeria6.jpg">
-          <img src="assets/images/gallery/galeria6.jpg" class="img-fluid rounded shadow-sm" alt="Caso 6">
+      <div class="col-6 col-md-4 col-lg-2">
+        <a href="assets/images/gallery/galeria6.jpg" data-fancybox="galeria" data-caption="Caso 6" class="case-block wow fadeInUp animated" data-wow-delay="0.5s">
+          <img src="assets/images/gallery/galeria6.jpg" class="img-fluid shadow-sm" alt="Caso 6">
+          <div class="case-overlay"></div>
+          <div class="case-text">
+            <span>Ver caso 6</span>
+            <span class="case-icon"><i class="fa fa-search-plus" aria-hidden="true"></i></span>
+          </div>
         </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Modal Lightbox -->
-<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content bg-transparent border-0">
-      <img id="lightboxImage" src="" class="img-fluid rounded">
-    </div>
-  </div>
-</div>
-
-<script>
-  const lightboxModal = document.getElementById('lightboxModal');
-  lightboxModal.addEventListener('show.bs.modal', function (event) {
-    const trigger = event.relatedTarget;
-    const imageUrl = trigger.getAttribute('data-bs-image');
-    const modalImage = document.getElementById('lightboxImage');
-    modalImage.src = imageUrl;
-  });
-</script>
-<footer id="footerParallax" class="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row widget-boxes text-center">
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="widget-info-box">
-                  <div class="info-img">
-                    <img src="assets/images/footer/1.svg" alt="phone">
-                  </div>
-                  <h4>Teléfono</h4>
-                  <p><a href="https://wa.me/+523333900700" target="_blank">333 390 0700</a></p>               
-                </div>
-                <!-- .widget-info-box end -->
-              </div>
-              <!-- .col-md-4 end -->
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="widget-info-box">
-                  <div class="info-img">
-                    <img src="assets/images/footer/2.svg" alt="phone">
-                  </div>
-                  <h4>Horario</h4>
-                  <p>Lunes - Sábado 9:00am a 2:00pm</p>            
-                </div>
-                <!-- .widget-info-box end -->
-              </div>
-              <!-- .col-md-4 end -->
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="widget-info-box">
-                  <div class="info-img">
-                    <img src="assets/images/footer/3.svg" alt="phone">
-                  </div>
-                  <h4>Ubicación</h4>
-                  <p>Calle Francisco Marquez #21. Col. Mansiones del Real, CD Guzman, Jal.</p>
-                  <a href="https://maps.app.goo.gl/mHVa2erk1P9L648D9" target="_blank">Ver en Google Maps</a>   
-                </div>
-                <!-- .widget-info-box end -->
-              </div>
-              <!-- .col-md-4 end -->
-            </div>
-            <!-- .row end -->
-          </div>
-          <!-- .container end -->
-        </div>
-        <!-- .footer-top end -->
-        <div class="footer-bar">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <hr>
+<footer id="footerParallax" class="footer footer-floria">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 footer-brand">
+              <h3>Dr. Salvador Sandoval</h3>
+              <p>Ortopedia y Traumatología &mdash; cirugía de rodilla, cadera, hombro y manejo del dolor. Atención profesional y personalizada en Veracruz.</p>
+              <div class="social-row">
+                <a class="facebook" href="https://www.facebook.com/share/1GVCvtHqU1/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a class="instagram" href="https://www.instagram.com/drsalvadorsandoval?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
               </div>
             </div>
-          </div>
-          <!-- .container end -->
-        </div>
-        <!-- .footer-bar end -->
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="footer-copyright">
-                  <span>&copy; Dr. Salvador Sandoval. Todos los derechos reservados.</span>
-                </div>
-              </div>
-              <!-- .col-md-6 end -->
-              <div class="col-12 col-md-6 col-lg-6">
-                <div class="footer-social" style="font-size: 1.5em;">
-                  <a class="facebook" href="https://www.facebook.com/share/1GVCvtHqU1/?mibextid=wwXIfr" target="_blank" style="margin-right: 10px;">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a class="instagram" href="https://www.instagram.com/drsalvadorsandoval?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    <i class="fa fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- .col-md-6 end -->
+            <div class="col-12 col-sm-6 col-lg-2 offset-lg-1 footer-col">
+              <h6>Navegación</h6>
+              <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#patients">Testimonios</a></li>
+                <li><a href="index.html#consultation">Contáctanos</a></li>
+                <li><a href="gonartrosis.html">Gonartrosis</a></li>
+                <li><a href="protesis-de-rodilla.html">Prótesis de Rodilla</a></li>
+              </ul>
             </div>
-            <!-- .row end -->
+            <div class="col-12 col-sm-6 col-lg-2 footer-col">
+              <h6>Contacto</h6>
+              <ul>
+                <li><a href="https://wa.me/+523333900700" target="_blank">333 390 0700</a></li>
+                <li>Lun&ndash;Sáb, 9:00&ndash;14:00</li>
+                <li><a href="https://www.doctoralia.com.mx/perfil/juan-salvador-sandoval-vargas" target="_blank" rel="noopener">Ver en Doctoralia</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-3 footer-col">
+              <h6>Ubicación</h6>
+              <ul>
+                <li>Calle Francisco Marquez #21, Col. Mansiones del Real, CD Guzmán, Jal.</li>
+                <li><a href="https://maps.app.goo.gl/mHVa2erk1P9L648D9" target="_blank">Ver en Google Maps</a></li>
+              </ul>
+            </div>
           </div>
-          <!-- .container end -->
         </div>
-        <!-- .footer-bottom end -->
+        <div class="wordmark"><span class="wordmark-small">Dr. Salvador</span>SANDOVAL</div>
+        <div class="footer-bottom-bar">
+          <div class="container text-center">
+            &copy; Dr. Salvador Sandoval. Todos los derechos reservados. &mdash; Aviso de Publicidad 2530082002A00044
+          </div>
+        </div>
       </footer>
       <!-- #footer end -->
     </div>
@@ -591,29 +618,13 @@
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/functions.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          var navToggle = document.querySelector(".navbar-toggler");
-          var navMenu = document.querySelector("#navbarContent");
-      
-          navToggle.addEventListener("click", function() {
-              navMenu.classList.toggle("show"); // Muestra u oculta el menú
-          });
-      });
-      </script>
-  
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var navToggle = document.querySelector(".navbar-toggler");
-    var navMenu = document.querySelector("#navbarContent");
+    <!-- Scroll to top -->
+    <button class="scroll-top" aria-label="Volver arriba"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener("click", function() {
-            navMenu.classList.toggle("show");
-        });
-    }
-});
-</script>
+    <!-- Plantilla effects: WOW reveal, Fancybox gallery, scroll-top, preloader -->
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/jquery.fancybox.min.js"></script>
+    <script src="assets/js/plantilla-effects.js"></script>
 
 </body>
 
